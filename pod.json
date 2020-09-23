@@ -1,0 +1,231 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "easy-wallet-865d6fd4c5-rk6dg",
+    "generateName": "easy-wallet-865d6fd4c5-",
+    "namespace": "default",
+    "selfLink": "/api/v1/namespaces/default/pods/easy-wallet-865d6fd4c5-rk6dg",
+    "uid": "41fbdfe0-3c92-4c75-810e-fe2ddcaf8cc7",
+    "resourceVersion": "18357",
+    "creationTimestamp": "2020-09-23T05:18:22Z",
+    "labels": {
+      "app": "easy-wallet",
+      "pod-template-hash": "865d6fd4c5"
+    },
+    "ownerReferences": [
+      {
+        "apiVersion": "apps/v1",
+        "kind": "ReplicaSet",
+        "name": "easy-wallet-865d6fd4c5",
+        "uid": "9a715dca-7ba3-4fb2-87d0-c834630814ec",
+        "controller": true,
+        "blockOwnerDeletion": true
+      }
+    ],
+    "managedFields": [
+      {
+        "manager": "kube-controller-manager",
+        "operation": "Update",
+        "apiVersion": "v1",
+        "time": "2020-09-23T05:18:22Z",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:metadata": {
+            "f:generateName": {},
+            "f:labels": {
+              ".": {},
+              "f:app": {},
+              "f:pod-template-hash": {}
+            },
+            "f:ownerReferences": {
+              ".": {},
+              "k:{\"uid\":\"9a715dca-7ba3-4fb2-87d0-c834630814ec\"}": {
+                ".": {},
+                "f:apiVersion": {},
+                "f:blockOwnerDeletion": {},
+                "f:controller": {},
+                "f:kind": {},
+                "f:name": {},
+                "f:uid": {}
+              }
+            }
+          },
+          "f:spec": {
+            "f:containers": {
+              "k:{\"name\":\"easy-wallet\"}": {
+                ".": {},
+                "f:image": {},
+                "f:imagePullPolicy": {},
+                "f:name": {},
+                "f:resources": {},
+                "f:terminationMessagePath": {},
+                "f:terminationMessagePolicy": {}
+              }
+            },
+            "f:dnsPolicy": {},
+            "f:enableServiceLinks": {},
+            "f:restartPolicy": {},
+            "f:schedulerName": {},
+            "f:securityContext": {},
+            "f:terminationGracePeriodSeconds": {}
+          }
+        }
+      },
+      {
+        "manager": "kubelet",
+        "operation": "Update",
+        "apiVersion": "v1",
+        "time": "2020-09-23T05:18:23Z",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:status": {
+            "f:conditions": {
+              "k:{\"type\":\"ContainersReady\"}": {
+                ".": {},
+                "f:lastProbeTime": {},
+                "f:lastTransitionTime": {},
+                "f:status": {},
+                "f:type": {}
+              },
+              "k:{\"type\":\"Initialized\"}": {
+                ".": {},
+                "f:lastProbeTime": {},
+                "f:lastTransitionTime": {},
+                "f:status": {},
+                "f:type": {}
+              },
+              "k:{\"type\":\"Ready\"}": {
+                ".": {},
+                "f:lastProbeTime": {},
+                "f:lastTransitionTime": {},
+                "f:status": {},
+                "f:type": {}
+              }
+            },
+            "f:containerStatuses": {},
+            "f:hostIP": {},
+            "f:phase": {},
+            "f:podIP": {},
+            "f:podIPs": {
+              ".": {},
+              "k:{\"ip\":\"172.18.0.6\"}": {
+                ".": {},
+                "f:ip": {}
+              }
+            },
+            "f:startTime": {}
+          }
+        }
+      }
+    ]
+  },
+  "spec": {
+    "volumes": [
+      {
+        "name": "default-token-7kdhr",
+        "secret": {
+          "secretName": "default-token-7kdhr",
+          "defaultMode": 420
+        }
+      }
+    ],
+    "containers": [
+      {
+        "name": "easy-wallet",
+        "image": "docker.io/library/easy-wallet:0.0.1-SNAPSHOT",
+        "resources": {},
+        "volumeMounts": [
+          {
+            "name": "default-token-7kdhr",
+            "readOnly": true,
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+          }
+        ],
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "imagePullPolicy": "IfNotPresent"
+      }
+    ],
+    "restartPolicy": "Always",
+    "terminationGracePeriodSeconds": 30,
+    "dnsPolicy": "ClusterFirst",
+    "serviceAccountName": "default",
+    "serviceAccount": "default",
+    "nodeName": "minikube",
+    "securityContext": {},
+    "schedulerName": "default-scheduler",
+    "tolerations": [
+      {
+        "key": "node.kubernetes.io/not-ready",
+        "operator": "Exists",
+        "effect": "NoExecute",
+        "tolerationSeconds": 300
+      },
+      {
+        "key": "node.kubernetes.io/unreachable",
+        "operator": "Exists",
+        "effect": "NoExecute",
+        "tolerationSeconds": 300
+      }
+    ],
+    "priority": 0,
+    "enableServiceLinks": true,
+    "preemptionPolicy": "PreemptLowerPriority"
+  },
+  "status": {
+    "phase": "Running",
+    "conditions": [
+      {
+        "type": "Initialized",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2020-09-23T05:18:22Z"
+      },
+      {
+        "type": "Ready",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2020-09-23T05:18:23Z"
+      },
+      {
+        "type": "ContainersReady",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2020-09-23T05:18:23Z"
+      },
+      {
+        "type": "PodScheduled",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2020-09-23T05:18:22Z"
+      }
+    ],
+    "hostIP": "172.17.0.3",
+    "podIP": "172.18.0.6",
+    "podIPs": [
+      {
+        "ip": "172.18.0.6"
+      }
+    ],
+    "startTime": "2020-09-23T05:18:22Z",
+    "containerStatuses": [
+      {
+        "name": "easy-wallet",
+        "state": {
+          "running": {
+            "startedAt": "2020-09-23T05:18:23Z"
+          }
+        },
+        "lastState": {},
+        "ready": true,
+        "restartCount": 0,
+        "image": "easy-wallet:0.0.1-SNAPSHOT",
+        "imageID": "docker://sha256:b3e4a79b3ec3ddc408a392bea947e12c9d58a43d40dd264f613f3e1de6e5b971",
+        "containerID": "docker://0b9c4fd607718c584f174a322368bdedd111bfae89cb1b7a99da3289b5343766",
+        "started": true
+      }
+    ],
+    "qosClass": "BestEffort"
+  }
+}

@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("io.spring.dependency-management")
     id("org.asciidoctor.convert")
+    id("org.jetbrains.kotlin.plugin.jpa") version "1.3.50"
     kotlin("jvm")
     kotlin("plugin.spring")
 }
@@ -33,6 +34,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("org.springframework.cloud:spring-cloud-starter")
     implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-reactor-resilience4j")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     runtimeOnly("com.h2database:h2")
     runtimeOnly("io.r2dbc:r2dbc-h2")
     runtimeOnly("io.r2dbc:r2dbc-postgresql")

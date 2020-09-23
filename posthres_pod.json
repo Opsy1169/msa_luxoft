@@ -1,0 +1,566 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "my-release-postgresql-0",
+    "generateName": "my-release-postgresql-",
+    "namespace": "default",
+    "selfLink": "/api/v1/namespaces/default/pods/my-release-postgresql-0",
+    "uid": "ba059a8c-f828-42a0-bd41-f08186c4ca6b",
+    "resourceVersion": "18275",
+    "creationTimestamp": "2020-09-22T07:53:54Z",
+    "labels": {
+      "app.kubernetes.io/instance": "my-release",
+      "app.kubernetes.io/managed-by": "Helm",
+      "app.kubernetes.io/name": "postgresql",
+      "controller-revision-hash": "my-release-postgresql-7f6b8fc7dc",
+      "helm.sh/chart": "postgresql-9.7.0",
+      "role": "master",
+      "statefulset.kubernetes.io/pod-name": "my-release-postgresql-0"
+    },
+    "ownerReferences": [
+      {
+        "apiVersion": "apps/v1",
+        "kind": "StatefulSet",
+        "name": "my-release-postgresql",
+        "uid": "99143326-929d-48ba-8922-9bc71bd766de",
+        "controller": true,
+        "blockOwnerDeletion": true
+      }
+    ],
+    "managedFields": [
+      {
+        "manager": "kube-controller-manager",
+        "operation": "Update",
+        "apiVersion": "v1",
+        "time": "2020-09-22T07:53:54Z",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:metadata": {
+            "f:generateName": {},
+            "f:labels": {
+              ".": {},
+              "f:app.kubernetes.io/instance": {},
+              "f:app.kubernetes.io/managed-by": {},
+              "f:app.kubernetes.io/name": {},
+              "f:controller-revision-hash": {},
+              "f:helm.sh/chart": {},
+              "f:role": {},
+              "f:statefulset.kubernetes.io/pod-name": {}
+            },
+            "f:ownerReferences": {
+              ".": {},
+              "k:{\"uid\":\"99143326-929d-48ba-8922-9bc71bd766de\"}": {
+                ".": {},
+                "f:apiVersion": {},
+                "f:blockOwnerDeletion": {},
+                "f:controller": {},
+                "f:kind": {},
+                "f:name": {},
+                "f:uid": {}
+              }
+            }
+          },
+          "f:spec": {
+            "f:containers": {
+              "k:{\"name\":\"my-release-postgresql\"}": {
+                ".": {},
+                "f:env": {
+                  ".": {},
+                  "k:{\"name\":\"BITNAMI_DEBUG\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"PGDATA\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"POSTGRESQL_CLIENT_MIN_MESSAGES\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"POSTGRESQL_ENABLE_LDAP\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"POSTGRESQL_ENABLE_TLS\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"POSTGRESQL_LOG_CONNECTIONS\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"POSTGRESQL_LOG_DISCONNECTIONS\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"POSTGRESQL_LOG_HOSTNAME\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"POSTGRESQL_PGAUDIT_LOG_CATALOG\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"POSTGRESQL_PORT_NUMBER\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"POSTGRESQL_SHARED_PRELOAD_LIBRARIES\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"POSTGRESQL_VOLUME_DIR\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  },
+                  "k:{\"name\":\"POSTGRES_PASSWORD\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:valueFrom": {
+                      ".": {},
+                      "f:secretKeyRef": {
+                        ".": {},
+                        "f:key": {},
+                        "f:name": {}
+                      }
+                    }
+                  },
+                  "k:{\"name\":\"POSTGRES_USER\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  }
+                },
+                "f:image": {},
+                "f:imagePullPolicy": {},
+                "f:livenessProbe": {
+                  ".": {},
+                  "f:exec": {
+                    ".": {},
+                    "f:command": {}
+                  },
+                  "f:failureThreshold": {},
+                  "f:initialDelaySeconds": {},
+                  "f:periodSeconds": {},
+                  "f:successThreshold": {},
+                  "f:timeoutSeconds": {}
+                },
+                "f:name": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"containerPort\":5432,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:containerPort": {},
+                    "f:name": {},
+                    "f:protocol": {}
+                  }
+                },
+                "f:readinessProbe": {
+                  ".": {},
+                  "f:exec": {
+                    ".": {},
+                    "f:command": {}
+                  },
+                  "f:failureThreshold": {},
+                  "f:initialDelaySeconds": {},
+                  "f:periodSeconds": {},
+                  "f:successThreshold": {},
+                  "f:timeoutSeconds": {}
+                },
+                "f:resources": {
+                  ".": {},
+                  "f:requests": {
+                    ".": {},
+                    "f:cpu": {},
+                    "f:memory": {}
+                  }
+                },
+                "f:securityContext": {
+                  ".": {},
+                  "f:runAsUser": {}
+                },
+                "f:terminationMessagePath": {},
+                "f:terminationMessagePolicy": {},
+                "f:volumeMounts": {
+                  ".": {},
+                  "k:{\"mountPath\":\"/bitnami/postgresql\"}": {
+                    ".": {},
+                    "f:mountPath": {},
+                    "f:name": {}
+                  },
+                  "k:{\"mountPath\":\"/dev/shm\"}": {
+                    ".": {},
+                    "f:mountPath": {},
+                    "f:name": {}
+                  }
+                }
+              }
+            },
+            "f:dnsPolicy": {},
+            "f:enableServiceLinks": {},
+            "f:hostname": {},
+            "f:restartPolicy": {},
+            "f:schedulerName": {},
+            "f:securityContext": {
+              ".": {},
+              "f:fsGroup": {}
+            },
+            "f:subdomain": {},
+            "f:terminationGracePeriodSeconds": {},
+            "f:volumes": {
+              ".": {},
+              "k:{\"name\":\"data\"}": {
+                ".": {},
+                "f:name": {},
+                "f:persistentVolumeClaim": {
+                  ".": {},
+                  "f:claimName": {}
+                }
+              },
+              "k:{\"name\":\"dshm\"}": {
+                ".": {},
+                "f:emptyDir": {
+                  ".": {},
+                  "f:medium": {},
+                  "f:sizeLimit": {}
+                },
+                "f:name": {}
+              }
+            }
+          }
+        }
+      },
+      {
+        "manager": "kube-scheduler",
+        "operation": "Update",
+        "apiVersion": "v1",
+        "time": "2020-09-22T07:53:54Z",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:status": {
+            "f:conditions": {
+              ".": {},
+              "k:{\"type\":\"PodScheduled\"}": {
+                ".": {},
+                "f:lastProbeTime": {},
+                "f:lastTransitionTime": {},
+                "f:message": {},
+                "f:reason": {},
+                "f:status": {},
+                "f:type": {}
+              }
+            }
+          }
+        }
+      },
+      {
+        "manager": "kubelet",
+        "operation": "Update",
+        "apiVersion": "v1",
+        "time": "2020-09-23T05:17:10Z",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:status": {
+            "f:conditions": {
+              "k:{\"type\":\"ContainersReady\"}": {
+                ".": {},
+                "f:lastProbeTime": {},
+                "f:lastTransitionTime": {},
+                "f:status": {},
+                "f:type": {}
+              },
+              "k:{\"type\":\"Initialized\"}": {
+                ".": {},
+                "f:lastProbeTime": {},
+                "f:lastTransitionTime": {},
+                "f:status": {},
+                "f:type": {}
+              },
+              "k:{\"type\":\"Ready\"}": {
+                ".": {},
+                "f:lastProbeTime": {},
+                "f:lastTransitionTime": {},
+                "f:status": {},
+                "f:type": {}
+              }
+            },
+            "f:containerStatuses": {},
+            "f:hostIP": {},
+            "f:phase": {},
+            "f:podIP": {},
+            "f:podIPs": {
+              ".": {},
+              "k:{\"ip\":\"172.18.0.2\"}": {
+                ".": {},
+                "f:ip": {}
+              }
+            },
+            "f:startTime": {}
+          }
+        }
+      }
+    ]
+  },
+  "spec": {
+    "volumes": [
+      {
+        "name": "data",
+        "persistentVolumeClaim": {
+          "claimName": "data-my-release-postgresql-0"
+        }
+      },
+      {
+        "name": "dshm",
+        "emptyDir": {
+          "medium": "Memory",
+          "sizeLimit": "1Gi"
+        }
+      },
+      {
+        "name": "default-token-7kdhr",
+        "secret": {
+          "secretName": "default-token-7kdhr",
+          "defaultMode": 420
+        }
+      }
+    ],
+    "containers": [
+      {
+        "name": "my-release-postgresql",
+        "image": "docker.io/bitnami/postgresql:11.9.0-debian-10-r26",
+        "ports": [
+          {
+            "name": "tcp-postgresql",
+            "containerPort": 5432,
+            "protocol": "TCP"
+          }
+        ],
+        "env": [
+          {
+            "name": "BITNAMI_DEBUG",
+            "value": "false"
+          },
+          {
+            "name": "POSTGRESQL_PORT_NUMBER",
+            "value": "5432"
+          },
+          {
+            "name": "POSTGRESQL_VOLUME_DIR",
+            "value": "/bitnami/postgresql"
+          },
+          {
+            "name": "PGDATA",
+            "value": "/bitnami/postgresql/data"
+          },
+          {
+            "name": "POSTGRES_USER",
+            "value": "postgres"
+          },
+          {
+            "name": "POSTGRES_PASSWORD",
+            "valueFrom": {
+              "secretKeyRef": {
+                "name": "my-release-postgresql",
+                "key": "postgresql-password"
+              }
+            }
+          },
+          {
+            "name": "POSTGRESQL_ENABLE_LDAP",
+            "value": "no"
+          },
+          {
+            "name": "POSTGRESQL_ENABLE_TLS",
+            "value": "no"
+          },
+          {
+            "name": "POSTGRESQL_LOG_HOSTNAME",
+            "value": "false"
+          },
+          {
+            "name": "POSTGRESQL_LOG_CONNECTIONS",
+            "value": "false"
+          },
+          {
+            "name": "POSTGRESQL_LOG_DISCONNECTIONS",
+            "value": "false"
+          },
+          {
+            "name": "POSTGRESQL_PGAUDIT_LOG_CATALOG",
+            "value": "off"
+          },
+          {
+            "name": "POSTGRESQL_CLIENT_MIN_MESSAGES",
+            "value": "error"
+          },
+          {
+            "name": "POSTGRESQL_SHARED_PRELOAD_LIBRARIES",
+            "value": "pgaudit"
+          }
+        ],
+        "resources": {
+          "requests": {
+            "cpu": "250m",
+            "memory": "256Mi"
+          }
+        },
+        "volumeMounts": [
+          {
+            "name": "dshm",
+            "mountPath": "/dev/shm"
+          },
+          {
+            "name": "data",
+            "mountPath": "/bitnami/postgresql"
+          },
+          {
+            "name": "default-token-7kdhr",
+            "readOnly": true,
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+          }
+        ],
+        "livenessProbe": {
+          "exec": {
+            "command": [
+              "/bin/sh",
+              "-c",
+              "exec pg_isready -U \"postgres\" -h 127.0.0.1 -p 5432"
+            ]
+          },
+          "initialDelaySeconds": 30,
+          "timeoutSeconds": 5,
+          "periodSeconds": 10,
+          "successThreshold": 1,
+          "failureThreshold": 6
+        },
+        "readinessProbe": {
+          "exec": {
+            "command": [
+              "/bin/sh",
+              "-c",
+              "-e",
+              "exec pg_isready -U \"postgres\" -h 127.0.0.1 -p 5432\n[ -f /opt/bitnami/postgresql/tmp/.initialized ] || [ -f /bitnami/postgresql/.initialized ]\n"
+            ]
+          },
+          "initialDelaySeconds": 5,
+          "timeoutSeconds": 5,
+          "periodSeconds": 10,
+          "successThreshold": 1,
+          "failureThreshold": 6
+        },
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "imagePullPolicy": "IfNotPresent",
+        "securityContext": {
+          "runAsUser": 1001
+        }
+      }
+    ],
+    "restartPolicy": "Always",
+    "terminationGracePeriodSeconds": 30,
+    "dnsPolicy": "ClusterFirst",
+    "serviceAccountName": "default",
+    "serviceAccount": "default",
+    "nodeName": "minikube",
+    "securityContext": {
+      "fsGroup": 1001
+    },
+    "hostname": "my-release-postgresql-0",
+    "subdomain": "my-release-postgresql-headless",
+    "schedulerName": "default-scheduler",
+    "tolerations": [
+      {
+        "key": "node.kubernetes.io/not-ready",
+        "operator": "Exists",
+        "effect": "NoExecute",
+        "tolerationSeconds": 300
+      },
+      {
+        "key": "node.kubernetes.io/unreachable",
+        "operator": "Exists",
+        "effect": "NoExecute",
+        "tolerationSeconds": 300
+      }
+    ],
+    "priority": 0,
+    "enableServiceLinks": true,
+    "preemptionPolicy": "PreemptLowerPriority"
+  },
+  "status": {
+    "phase": "Running",
+    "conditions": [
+      {
+        "type": "Initialized",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2020-09-22T07:53:56Z"
+      },
+      {
+        "type": "Ready",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2020-09-23T05:17:10Z"
+      },
+      {
+        "type": "ContainersReady",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2020-09-23T05:17:10Z"
+      },
+      {
+        "type": "PodScheduled",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2020-09-22T07:53:56Z"
+      }
+    ],
+    "hostIP": "172.17.0.3",
+    "podIP": "172.18.0.2",
+    "podIPs": [
+      {
+        "ip": "172.18.0.2"
+      }
+    ],
+    "startTime": "2020-09-22T07:53:56Z",
+    "containerStatuses": [
+      {
+        "name": "my-release-postgresql",
+        "state": {
+          "running": {
+            "startedAt": "2020-09-23T05:16:56Z"
+          }
+        },
+        "lastState": {
+          "terminated": {
+            "exitCode": 0,
+            "reason": "Completed",
+            "startedAt": "2020-09-22T14:31:44Z",
+            "finishedAt": "2020-09-22T20:02:22Z",
+            "containerID": "docker://938fa61929dc69f40d2c3fbc857f72a727e04fac0a7270e573a865c105fb220a"
+          }
+        },
+        "ready": true,
+        "restartCount": 2,
+        "image": "bitnami/postgresql:11.9.0-debian-10-r26",
+        "imageID": "docker-pullable://bitnami/postgresql@sha256:9d851f80d206279fb1ada9abba7465629103dd4ea0584d60d1203ef2aa0791a2",
+        "containerID": "docker://1eb2f85d14b1099dd96f44c8e4e3db1ec66c855149098662923d332780c871d5",
+        "started": true
+      }
+    ],
+    "qosClass": "Burstable"
+  }
+}
